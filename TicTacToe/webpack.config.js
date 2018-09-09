@@ -1,5 +1,5 @@
 module.exports = {
-    mode: 'development'
+    mode: 'development',
     entry: './src/app.jsx',
     output: {
         filename: 'bundle.js'
