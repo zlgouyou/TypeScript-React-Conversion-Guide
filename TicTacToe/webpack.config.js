@@ -1,15 +1,15 @@
 module.exports = {
     mode: 'development',
-    entry: './src/app.jsx',
+    entry: './src/app.tsx',
     output: {
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".jsx"]
+        extensions: [".ts", ".tsx"]
     },
     module: {
         rules: [
-            {test: /\.(t|j)sx?$/, use: {loader: 'awesome-typescript-loader'}},
+            {test: /\.tsx?$/, use: {loader: 'awesome-typescript-loader'}},
             {enforce: "pre", test: /\.js$/, loader: "source-map-loader"}
         ]
     },

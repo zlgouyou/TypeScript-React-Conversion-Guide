@@ -1,14 +1,14 @@
-import React from "react";
+import * as React from "react";
 import { render } from "react-dom";
 import { Board } from "./board";
 import { RestartBtn } from "./restartBtn";
 import { GameStateBar } from "./gameStateBar";
 
-class App extends React.Component {
+class App extends React.Component<Object, Object>  {
     render() {
         return (
             <div className="app"> 
-                <Board /> 
+                <Board />
                 <div>
                     <span className="description t1"> Player(X) </span>                
                     <span className="description t2"> Computer(O) </span>
