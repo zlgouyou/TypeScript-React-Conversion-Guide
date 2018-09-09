@@ -59,6 +59,10 @@ npm install --save @types/react @types/react-dom
 
 If you are using an older version of React/ReacDOM that are incompatible with the latest .d.ts files from @types, you can specify version number for `@types/react` and `@types/react-dom` in `package.json`.
 
+All in one : 
+```sh
+npm install --save-dev typescript awesome-typescript-loader source-map-loader @types/react@^15.0.21 @types/react-dom@^0.14.23
+```
 ### Configure TypeScript
 
 Next, configure TypeScript by creating a `tsconfig.json` file in the `TicTacToe_JS` folder, and add,
@@ -203,6 +207,11 @@ componentWillUnmount() {
 ```
 
 To use stricter type checking, you can also specify useful [compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html) in `tsconfig.json`. For example, `noImplicitAny` is a recommended option that triggers the compiler to error on expressions and declarations with an implied `any` type.
+
+```json
+    "skipLibCheck": true,
+    "noImplicitAny": true       // disallow implicit any type
+```
 
 You can also add [private/protected modifier](https://www.typescriptlang.org/docs/handbook/classes.html) to class members for access control. Let's mark `handleGameStateChange` and `handleRestart` as `private` as they are internal to `gameStateBar`.
 
