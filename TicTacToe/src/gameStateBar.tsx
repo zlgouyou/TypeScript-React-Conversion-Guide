@@ -1,8 +1,6 @@
 import * as React from "react";
+import {GameState} from "./constants"
 
-const enum GameState {
-    IN_PROCESS = ""
-}
 class GameStateBarState {
     constructor(public gameState: GameState){};
 }
